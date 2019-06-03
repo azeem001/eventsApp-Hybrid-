@@ -1,0 +1,58 @@
+
+<ion-content padding color='tertiary'>
+  <ion-card padding style="border-radius : 15px;background: white;height: 97% ">
+
+      <ion-img width="80" height="80" src="assets/logo.png"></ion-img>
+   
+      <ion-item style="margin-bottom : 20px;" >
+          <ion-icon color='tertiary'  name='mail' slot='start'></ion-icon>
+          <ion-input placeholder="Email / Username"></ion-input>
+      </ion-item>
+
+       
+            <ion-item >
+                <ion-icon color='tertiary' name='lock' slot='start'></ion-icon>
+                <ion-input placeholder="Password"></ion-input>
+            </ion-item>
+           
+              <div text-center style="margin-top:35px">
+                  <ion-button text-center shape="round" (click)="doLogin()" expand="full" color='tertiary'> <ion-icon  name='unlock' ></ion-icon> &nbsp;&nbsp;Sign in</ion-button>
+              </div>
+              
+              <p text-center style="margin-top: 30px;color:#7044FF">Not registered yet ? </p>
+
+              <div text-center>
+                <p text-center style="color :#007ACC">  <ion-icon   color='tertiary'  name='person-add' ></ion-icon>&nbsp;&nbsp; Register now </p>
+              </div>
+     
+             <ion-footer>
+                  <ion-toolbar>
+                      <p style="margin-top:40px;" text-center>© 2019. PlexusSquare Software Solutions Pvt. Ltd.</p>
+              
+                      <p text-center>Version : 0.0.1</p>
+                  </ion-toolbar>
+                </ion-footer>
+
+   </ion-card>
+</ion-content>
+
+
+
+<div *ngIf="showSplash" class="splash">
+  <ion-img src='assets/logo3.png'></ion-img>
+    <div class="spinner">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+    </div>
+  </div>
+  
+

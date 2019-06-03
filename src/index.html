@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>3E Events Technology</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <script id="stay22-script">
+      document.addEventListener("DOMContentLoaded", function(e) {
+        // 1. Edit widget size
+        var settings22 = {
+          width: '100%', // set the width in px or %
+          height: '460px' // set the height in px or %
+        };
+        // 2. Fill out your config here and the rest should work
+        var s22obj = {
+          aid: 'plexussquare', // your affiliate id for tracking
+          address: 'Madison Square Park, New York' , // Lat/Lng or full street address. For latlng use the "lat":,"lng": keys instead
+          checkin: '2019-08-22', // checkin date for their stay in MM/DD/YYYY or ISO 8601 format
+          maincolor: '00549E' // your main brand color in hex (without the #)
+        };
+        // Leave this part intact
+        var params22=''; for (var key in s22obj){if (params22){params22 +='&';}params22 +=key + '=' + encodeURIComponent(s22obj[key]);}var div22=document.getElementById('stay22-script'); div22.insertAdjacentHTML('afterend', '<iframe id="stay22-widget" width="' + settings22.width + '" height="' + settings22.height + '" src="' + 'https://www.stay22.com/embed/gm?' + params22 + '" frameborder="0"></iframe>');
+      });
+    </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

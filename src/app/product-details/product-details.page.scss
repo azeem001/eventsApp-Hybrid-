@@ -1,0 +1,105 @@
+.custom-card
+{   
+    padding:10px;
+    background-color: white;
+}
+.custom-card2
+{   
+    background-color: white;
+    padding:10px;
+}
+.card-img
+{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+.card-content
+{   
+    width: 100%;
+}
+.card-title
+{   
+    width: 100%;
+    margin :5px;
+    color:#363636;
+}
+.card-desc
+{
+    margin:0;
+    padding:0;
+    width: 100%
+}
+.card-btn
+{
+    float:right;
+    padding-right: 5px;
+}
+
+.img-loaded + ion-spinner {
+    display:none;
+  }
+
+  .new-background-color{
+    --background: linear-gradient(to right bottom, #de283f, #db263c, #d7233a, #d42137, #d11e35, #d11e35, #d11e35, #d11e35, #d42137, #d7233a, #db263c, #de283f);
+    color : white;
+  }
+
+  .category-date 
+{
+  
+  margin-right:5px;
+  height: 200px;
+  border-radius: 6px;
+  background-image: linear-gradient(to right top, #861844, #961846, #a71947, #b71a47, #c71d46, #cf284a, #d8324e, #e03b52, #e3495e, #e5566a, #e66276, #e76d81);  
+  line-height: 100px;
+}
+
+.category-date .month 
+{
+  color : white;
+  font-size :35px;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.category-date .month span
+{
+  font-weight: bold;
+}
+.category-date .day
+{
+  color : white;
+  font-size :15px;
+  height: 30px;
+  margin:0;
+  padding: 0;
+}
+
+.category-date .day span
+{
+  background: #F4F5F8;
+  color : #222428;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+.new-background-color{
+  --background: linear-gradient(to right, #c4286c, #cd2362, #d42056, #da224a, #de273c);
+  color : white;
+}
+.product-name
+{
+  font-size:14px;
+  padding: 5px;
+  font-weight: 800;
+}
+.section1
+{
+  background-color: white;
+ 
+}

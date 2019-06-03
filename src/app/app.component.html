@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar style="--background: linear-gradient(to right, #c4286c, #cd2362, #d42056, #da224a, #de273c);color : white;">
+          <ion-title style="font-weight: bold" >
+            <ion-img src="assets/logo_small.png" style="width :25px;height:25px;float:left;margin-right:10px"> </ion-img> Events Technology
+          </ion-title> 
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div>
+          <ion-card >
+              
+              <ion-item class="ion-activatable" color="secondary" lines="none">
+                  <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon name="contact" style="font-size:35px;margin-right:10px;"></ion-icon> <span style="font-weight: bold;margin-right: 10px">Welcome</span>  <br> <span style="font-size:15px;">( Azeem )</span>
+              </ion-item>
+           </ion-card>   
+          
+        </div>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" >
+              <ion-icon   color="secondary" [name]="p.icon"></ion-icon>
+              <ion-label>
+               &nbsp; {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <p style=" position: fixed;left: 0;bottom: 10px;right: 0;padding:10px;" text-center><span><ion-button (click)="callaNumber()" size="small"><ion-icon name="call"></ion-icon>&nbsp; Call</ion-button></span> <span><ion-button size="small"><ion-icon name="chatboxes"></ion-icon>&nbsp; <a href="https://api.whatsapp.com/send?phone=918880161987" style="color:white;text-decoration:none">Chat</a></ion-button></span> <span><ion-button (click)="sendEmail()" size="small"><ion-icon name="mail"></ion-icon>&nbsp; Email</ion-button></span></p>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

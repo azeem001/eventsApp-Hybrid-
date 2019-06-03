@@ -1,0 +1,9 @@
+ion-tabs{
+    --ion-tabbar-background-color: #1c1c21;                      // already exists
+    --ion-tabbar-color: rgba(var(--ion-text-color-rgb), 0.4);    // suggested
+    --ion-tabbar-color-selected: var(--ion-text-color);          // suggested
+  }
+
+  // .new-background-color{
+  //   color : linear-gradient(to right, #d65db1, #ff6994, #ff8576, #ffaa61, #ffd15f);
+  // }

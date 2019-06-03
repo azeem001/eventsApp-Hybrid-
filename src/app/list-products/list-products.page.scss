@@ -1,0 +1,92 @@
+.custom-card
+{
+    height: 100px;
+}
+.card-img
+{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+.card-content
+{   
+    width: 100%;
+}
+.card-title
+{   
+    width: 100%;
+    margin :5px;
+    font-size: 14px;
+    color:#363636;
+}
+.card-desc
+{
+    margin:0;
+    padding:0;
+    font-size: 12px;
+    width: 100%
+}
+.card-btn
+{
+    padding-right: 15px;
+    padding: 6px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 4px;
+    margin: 5px;
+    right: 0;
+    color : white;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+ 
+}
+
+.category-date 
+{
+  width: 120px;
+  margin:0 10px 0 0;
+  padding: 0;
+  height: 100px;
+  border-radius: 6px;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  line-height: 70px;
+  float: left;
+}
+
+.category-date .month 
+{
+  color : white;
+  font-size :18px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.category-date .month span
+{
+  font-weight: bold;
+}
+.category-date .day
+{
+  color : white;
+  font-size :10px;
+  height: 20px;
+  margin:0;
+  padding: 0;
+}
+
+.category-date .day span
+{
+  background: #F4F5F8;
+  color : #222428;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  margin-top: 3px;
+}
+
+.new-background-color{
+  --background: linear-gradient(to right, #c4286c, #cd2362, #d42056, #da224a, #de273c);
+  color : white;
+}

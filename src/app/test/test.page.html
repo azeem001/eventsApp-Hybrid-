@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-icon name="arrow-back" slot="start" style="color:black;font-size:20px;margin-left:10px;"></ion-icon>
+    <ion-icon name="search" slot="end" style="color:black;font-size:20px;margin-right:10px;"></ion-icon>
+    <ion-title >Book Conference Rooms</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+    <ion-segment (ionChange)="tabChanged($event)">
+        <ion-segment-button value="location" checked>
+          <ion-label>Based on Location</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="invites">
+          <ion-label>Based on Invites</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+        <div *ngIf="currentTab=='location'">
+          <div text-center>
+              <div text-center style="width:100%">
+               <p style="margin: 5;"><span [style.background]="available.background" [style.color]="available.color" (click)="availableTab()" style="color:white;height:25px;padding:5px 10px 5px 10px;font-size:11px;border:1px solid #4A8CFF;">Available</span><span [style.background]="all.background" [style.color]="all.color" (click)="allTab()" style="border:1px solid #4A8CFF;color:grey;width:100px;height:25px;padding:5px 25px 5px 25px;font-size:11px;">All</span></p>
+               
+              </div>
+             
+          </div>
+
+            <div text-center>
+              <span style="color:#4A8CFF;font-size:12px;border:1px solid #D4D4D4;padding: 3px;border-radius:4px;margin-right:10px;">10:30 - 11:30</span><span style="color:#4A8CFF;font-size:12px;">  1 Hour <ion-icon name="time"></ion-icon></span>
+            </div>
+
+            <ion-item style="margin-top:10px;" lines="none">
+              <span style="background-color: #4A8CFF;color:white;padding:8px 15px 8px 15px;font-size:12px;border-radius:4px;">Building1</span> <ion-input style="background-color:#EBEBEB;border-radius:20px;margin:5px;padding-left:20px;height: 30px;" placeholder="Search conference rooms"><ion-icon style="color:grey;margin-left :15px;margin-right:15px;font-size:22px" name="search" slot="start"></ion-icon></ion-input> <ion-icon name="refresh-circle" style="font-size :30px;color:#4A8CFF"></ion-icon><ion-icon style="font-size :30px;color:#4A8CFF" name="folder"></ion-icon>
+            </ion-item>
+
+            
+                <ion-grid style="margin-top:15px;">
+                    <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                      <ion-col>
+                     <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Tokyo <br> <span style="font-size:10px">Public (6)</span></p>
+                      </ion-col>
+                      <ion-col>
+                          <p style="font-size:13px;color:grey;margin:0;padding:0">1st Floor </p>
+                      </ion-col>
+                      <ion-col>
+                          <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                      </ion-col>
+                      <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                    </ion-row>
+
+                    <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                        <ion-col>
+                       <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Istanbul <br> <span style="font-size:10px">Public (10)</span></p>
+                        </ion-col>
+                        <ion-col>
+                            <p style="font-size:13px;color:grey;margin:0;padding:0">2nd Floor </p>
+                        </ion-col>
+                        <ion-col>
+                            <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                        </ion-col>
+                        <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                      </ion-row>
+
+                      <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                          <ion-col>
+                         <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Singapore <br> <span style="font-size:10px">Public (8)</span></p>
+                          </ion-col>
+                          <ion-col>
+                              <p style="font-size:13px;color:grey;margin:0;padding:0">3rd Floor </p>
+                          </ion-col>
+                          <ion-col>
+                              <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                          </ion-col>
+                          <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                        </ion-row>
+
+                        <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                            <ion-col>
+                           <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">New York <br> <span style="font-size:10px">Public (6)</span></p>
+                            </ion-col>
+                            <ion-col>
+                                <p style="font-size:13px;color:grey;margin:0;padding:0">1st Floor </p>
+                            </ion-col>
+                            <ion-col>
+                                <p style="font-size:13px;color:grey;margin:0;padding:0">Available Till <br> <span >04:00 PM</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                            </ion-col>
+                            <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                          </ion-row>
+
+                          <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                              <ion-col>
+                             <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Moscow <br> <span style="font-size:10px">Public (10)</span></p>
+                              </ion-col>
+                              <ion-col>
+                                  <p style="font-size:13px;color:grey;margin:0;padding:0">2st Floor </p>
+                              </ion-col>
+                              <ion-col>
+                                  <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                              </ion-col>
+                              <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                            </ion-row>
+
+                            <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                                <ion-col>
+                               <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Hong Kong <br> <span style="font-size:10px">Public (9)</span></p>
+                                </ion-col>
+                                <ion-col>
+                                    <p style="font-size:13px;color:grey;margin:0;padding:0">3rd Floor </p>
+                                </ion-col>
+                                <ion-col>
+                                    <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                                </ion-col>
+                                <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                              </ion-row>
+
+                              <ion-row style="border-bottom:1px solid #D4D4D4;padding-top:5px;padding-bottom:5px">
+                                  <ion-col>
+                                 <ion-icon name="add-circle" style="font-size: 30px;float:left;width:30%;color:#10854C"></ion-icon>  <p style="font-size:13px;margin:0;padding:0">Russia <br> <span style="font-size:10px">Public (7)</span></p>
+                                  </ion-col>
+                                  <ion-col>
+                                      <p style="font-size:13px;color:grey;margin:0;padding:0">1st Floor </p>
+                                  </ion-col>
+                                  <ion-col>
+                                      <p style="font-size:13px;color:grey;margin:0;padding:0">Available <br> <span >All Day</span> <ion-icon name="arrow-back" style="float:right;font-size:16px" ></ion-icon></p>  
+                                  </ion-col>
+                                  <ion-icon name="arrow-back" color="light" slot="end"></ion-icon>
+                                </ion-row>
+                    </ion-grid>
+
+                  </div>
+            
+     
+     
+   
+</ion-content>
