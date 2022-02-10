@@ -37,7 +37,7 @@
     "ionic-image-loader": "^6.3.3",
     "ionic4-date-picker": "^0.1.0",
     "ng-circle-progress": "^1.4.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "rxjs": "~6.5.1",
     "rxjs-compat": "^6.5.2",
     "tslib": "^1.9.0",
